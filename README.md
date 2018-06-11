@@ -1,2 +1,2 @@
 # fluwitter
-Twitter client written using flutter and dart.
+A Twitter client written using flutter and dart.
