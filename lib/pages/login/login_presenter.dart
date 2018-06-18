@@ -1,4 +1,6 @@
 
+import 'dart:async';
+
 import 'package:fluwitter/domain/user_domain.dart';
 import 'package:fluwitter/infrastructure/dependency_injection.dart';
 import 'package:fluwitter/pages/login/login_contract.dart';
@@ -20,10 +22,11 @@ class LoginPresenter extends LoginPresenterContract {
     this.view.onCancelCallback = cancel;
     this.view.onFacebookLoginClickListener = facebookAuth;
     this.view.onGooglePlusLoginClickListener = googlePlusAuth;
+    this.view.onTwitterLoginClickListener = twitterAuth;
   }
 
   @override
-  void auth() async {
+  Future auth() async {
     if (isFormValid()) {
       // var user = await _userDataProvider.auth('xxxxxx');
       this.view.onAuthenticationComplete();
@@ -60,12 +63,17 @@ class LoginPresenter extends LoginPresenterContract {
   }
 
   @override
-  void facebookAuth() {
+  Future facebookAuth() async{
     print('Facebook Login Listener');
   }
 
   @override
-  void googlePlusAuth() {
+  Future googlePlusAuth() async{
     print('Google Plus Login Listener');
+  }
+
+  @override
+  Future twitterAuth() async{
+    print('Twitter Login Listener');
   }
 }

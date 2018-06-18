@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 abstract class LoginViewContract{
@@ -15,14 +16,17 @@ abstract class LoginViewContract{
   set onCancelCallback(VoidCallback value);
   set onFacebookLoginClickListener(VoidCallback value);
   set onGooglePlusLoginClickListener(VoidCallback value);
+  set onTwitterLoginClickListener(VoidCallback value);
 }
 
 abstract class LoginPresenterContract{
   void initView();
 
-  void auth();
-  void facebookAuth();
-  void googlePlusAuth();
+  Future auth();
+  Future facebookAuth();
+  Future googlePlusAuth();
+  Future twitterAuth();
+  
   void confirm();
   void cancel();
 }

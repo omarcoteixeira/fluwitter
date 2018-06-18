@@ -3,12 +3,10 @@ import 'package:fluwitter/pages/login/login_strings.dart' as Strings;
 import 'package:fluwitter/common/dialog_shower.dart' as DialogShower;
 import 'package:fluwitter/images.dart' as Images;
 import 'package:flutter/material.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'login_contract.dart';
 
 class LoginView extends LoginViewContract {
 
-  // final FirebaseAuth _auth = FirebaseAuth.instance;
   final TextEditingController _emailController = new TextEditingController();
   final TextEditingController _passController = new TextEditingController();
 
@@ -17,6 +15,7 @@ class LoginView extends LoginViewContract {
   VoidCallback _onConfirmCallback;
   VoidCallback _onFacebookLoginClickListener;
   VoidCallback _onGooglePlusLoginClickListener;
+  VoidCallback _onTwitterLoginClickListener;
   VoidCallback _onCancelCallback;
 
   LoginView(this.context) {
@@ -36,7 +35,7 @@ class LoginView extends LoginViewContract {
           //     confirmButton(_onConfirmCallback)
           //   ]
           // ),
-          twitterLoginButton(_onConfirmCallback),
+          twitterLoginButton(_onTwitterLoginClickListener),
         ],
       ),
     );
@@ -137,6 +136,11 @@ class LoginView extends LoginViewContract {
   }
 
   @override
+  set onTwitterLoginClickListener(VoidCallback value) {
+    _onTwitterLoginClickListener = value;
+  }
+
+  @override
   void onAuthenticationComplete() {
     print('Authenticated');
     Navigator.of(context).pop();
@@ -147,6 +151,6 @@ class LoginView extends LoginViewContract {
   VoidCallback get onConfirmCallback => _onConfirmCallback;
   VoidCallback get onFacebookLoginClickListener => _onFacebookLoginClickListener;
   VoidCallback get onGooglePlusLoginClickListener => _onGooglePlusLoginClickListener;
+  VoidCallback get onTwitterLoginClickListener => _onTwitterLoginClickListener;
   VoidCallback get onCancelCallback => _onCancelCallback;
-  
 }

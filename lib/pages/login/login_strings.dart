@@ -14,6 +14,9 @@ String twitterLoginButton = "Login with Twitter Account";
 String createAccount = "Click here to create your account.";
 String or = "or";
 
+String twitterApiKey = "w6oqHyCQBjUXd2MAhQbqreGMQ";
+String twitterApiSecret = "iKM2xMZr6fwZzOZgTb86pJoS7h5vrZBAwxRMCeWD0RnlGJATkl";
+
 //
 String emailHint = "Email";
 String passwordHint = "Password";
