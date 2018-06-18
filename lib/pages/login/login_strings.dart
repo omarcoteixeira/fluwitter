@@ -10,6 +10,7 @@ String haveNoAccount = "Have no account?";
 String loginButton = "LOGIN";
 String facebookLoginButton = "Login with facebook";
 String googlePlusLoginButton = "Login with Google+";
+String twitterLoginButton = "Login with Twitter Account";
 String createAccount = "Click here to create your account.";
 String or = "or";
 

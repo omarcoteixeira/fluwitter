@@ -1,11 +1,14 @@
 import 'package:fluwitter/pages/login/login_presenter.dart';
 import 'package:fluwitter/pages/login/login_strings.dart' as Strings;
 import 'package:fluwitter/common/dialog_shower.dart' as DialogShower;
+import 'package:fluwitter/images.dart' as Images;
 import 'package:flutter/material.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'login_contract.dart';
 
 class LoginView extends LoginViewContract {
 
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
   final TextEditingController _emailController = new TextEditingController();
   final TextEditingController _passController = new TextEditingController();
 
@@ -26,13 +29,14 @@ class LoginView extends LoginViewContract {
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          emailTextField(),
-          passwordTextField(),
-          new ButtonBar(
-            children: <Widget>[
-              confirmButton(_onConfirmCallback)
-            ]
-          )
+          // emailTextField(),
+          // passwordTextField(),
+          // new ButtonBar(
+          //   children: <Widget>[
+          //     confirmButton(_onConfirmCallback)
+          //   ]
+          // ),
+          twitterLoginButton(_onConfirmCallback),
         ],
       ),
     );
@@ -78,6 +82,30 @@ class LoginView extends LoginViewContract {
           )
       )
     );
+
+  Widget twitterLoginButton(VoidCallback callback) {
+    var assetImage = new AssetImage(Images.twitterIcon);
+
+    return new Padding(padding: new EdgeInsets.all(8.0),
+      child: new RaisedButton(
+          color: new Color(0xFF00ACED),
+          onPressed: callback,
+          child: new Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              new Image(image: assetImage, height: 24.0, width: 24.0),
+              new Padding(padding: const EdgeInsets.only(right: 8.0)),
+              new Text(Strings.twitterLoginButton,
+                style: new TextStyle(
+                  color: new Color(0xffffffff)
+                )
+              ),
+            ],
+          )
+      )
+    );
+  }
     
   @override
   void showInfoPopup(String message) {
