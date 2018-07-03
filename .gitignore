@@ -86,3 +86,5 @@ typings/
 # End of https://www.gitignore.io/api/dart,node,code
 
 build/
+
+.DS_Store
