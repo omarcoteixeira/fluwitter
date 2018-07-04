@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
-
 import 'package:fluwitter/common/loading_state.dart';
 
-import 'package:fluwitter/pages/settings/settings_strings.dart' as Strings;
-import 'package:fluwitter/pages/settings/settings_presenter.dart';
-import 'package:fluwitter/pages/settings/settings_view.dart';
+import 'package:fluwitter/pages/search/search_strings.dart' as Strings;
+import 'package:fluwitter/pages/search/search_presenter.dart';
+import 'package:fluwitter/pages/search/search_view.dart';
 
-class SettingsPage extends StatefulWidget {
+class SearchPage extends StatefulWidget {
 
   @override
-  State createState() => new SettingsPageState();
+  State createState() => new SearchPageState();
 
 }
 
-class SettingsPageState extends LoadingBaseState<SettingsPage> {
+class SearchPageState extends LoadingBaseState<SearchPage> {
 
-  SettingsView view;
-  SettingsPresenter presenter;
+  SearchView view;
+  SearchPresenter presenter;
 
   @override
   void initState() {
     super.initState();
-    this.view = new SettingsView(context);
-    this.presenter = new SettingsPresenter(view);
+    this.view = new SearchView(context);
+    this.presenter = new SearchPresenter(view);
     this.presenter.initView();
   }
 
@@ -57,12 +56,22 @@ class SettingsPageState extends LoadingBaseState<SettingsPage> {
   AppBar appBar() {
     return new AppBar(
       title: new Text(title()),
-      actions: <Widget>[],
+      actions: <Widget>[
+        IconButton(
+          icon: Icon(Icons.tune),
+          onPressed: () {
+            print('Filter button');
+          },
+        ),
+      ],
     );
   }
 
   @override
   FloatingActionButton floatingActionButton() {
-    return null;
+    return new FloatingActionButton(
+      child: new Icon(Icons.add),
+      onPressed: (){}
+    );
   }
 }

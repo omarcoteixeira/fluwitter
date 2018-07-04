@@ -1,36 +1,15 @@
 PODS:
-  - Fabric (1.7.7)
   - Flutter (1.0.0)
-  - flutter_twitter_login (0.0.1):
-    - Flutter
-    - TwitterKit
-  - TwitterCore (2.8.0):
-    - Fabric
-  - TwitterKit (2.8.1):
-    - TwitterCore (>= 2.8)
 
 DEPENDENCIES:
   - Flutter (from `.symlinks/flutter/ios`)
-  - flutter_twitter_login (from `.symlinks/plugins/flutter_twitter_login/ios`)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Fabric
-    - TwitterCore
-    - TwitterKit
 
 EXTERNAL SOURCES:
   Flutter:
     :path: ".symlinks/flutter/ios"
-  flutter_twitter_login:
-    :path: ".symlinks/plugins/flutter_twitter_login/ios"
 
 SPEC CHECKSUMS:
-  Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  flutter_twitter_login: 3cdd20f570fc128331e773432f8a3c98207ee7cb
-  TwitterCore: e959987be23c767004d29eb7fab8d85d8585a2e5
-  TwitterKit: 3b6044a7320340326a4098f3e37aa1dbaeb94942
 
 PODFILE CHECKSUM: 1e5af4103afd21ca5ead147d7b81d06f494f51a2
 

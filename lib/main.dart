@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/login/login_page.dart';
+import 'package:fluwitter/pages/search/search_page.dart';
 import 'package:fluwitter/pages/settings/settings_page.dart';
 
 void main() { 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/login': (BuildContext context) => new LoginPage(),
         '/home' : (BuildContext context) => new HomePage(),
+        '/search' : (BuildContext context) => new SearchPage(),
         '/settings' : (BuildContext context) => new SettingsPage()
       },
     );
