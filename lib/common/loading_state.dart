@@ -4,6 +4,10 @@ import 'package:fluwitter/strings.dart' as Strings;
 import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/search/search_page.dart';
 import 'package:fluwitter/pages/settings/settings_page.dart';
+import 'package:fluwitter/pages/notifications/notifications_page.dart';
+import 'package:fluwitter/pages/messages/messages_page.dart';
+import 'package:fluwitter/pages/profile/profile_page.dart';
+import 'package:fluwitter/pages/questions/questions_page.dart';
 
 abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
 
@@ -71,10 +75,14 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               return _navigate(new HomePage(), 'home');
               },
             ),
-            const ListTile(
+            new ListTile(
               leading: const Icon(Icons.account_circle),
               title: const Text(Strings.menuProfile),
               selected: false,
+              // selected: _route == 'profile',
+              onTap: () {
+                return _navigate(new ProfilePage(), 'profile');
+              },
             ),
             new ListTile(
               leading: const Icon(Icons.search),
@@ -84,20 +92,32 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               return _navigate(new SearchPage(), 'search');
               },
             ),
-            const ListTile(
+            new ListTile(
               leading: const Icon(Icons.notifications),
               title: const Text(Strings.menuNotifications),
               selected: false,
+              // selected: _route == 'notifications',
+              onTap: () {
+                return _navigate(new NotificationsPage(), 'notifications');
+              },
             ),
-            const ListTile(
+            new ListTile(
               leading: const Icon(Icons.mail),
               title: const Text(Strings.menuDirectMessages),
               selected: false,
+              // selected: _route == 'messages',
+              onTap: () {
+                return _navigate(new MessagesPage(), 'messages');
+              },
             ),
-            const ListTile(
+            new ListTile(
               leading: const Icon(Icons.question_answer),
               title: const Text(Strings.menuQuestionsAndAnswers),
               selected: false,
+              // selected: _route == 'settings',
+              onTap: () {
+                return _navigate(new QuestionsPage(), 'questions');
+              },
             ),
             new Divider(),
             new ListTile(

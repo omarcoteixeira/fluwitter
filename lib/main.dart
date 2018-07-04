@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/login/login_page.dart';
+import 'package:fluwitter/pages/messages/messages_page.dart';
+import 'package:fluwitter/pages/notifications/notifications_page.dart';
+import 'package:fluwitter/pages/profile/profile_page.dart';
+import 'package:fluwitter/pages/questions/questions_page.dart';
 import 'package:fluwitter/pages/search/search_page.dart';
 import 'package:fluwitter/pages/settings/settings_page.dart';
 
@@ -22,7 +26,11 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/login': (BuildContext context) => new LoginPage(),
         '/home' : (BuildContext context) => new HomePage(),
+        '/profile' : (BuildContext context) => new ProfilePage(),
+        '/messages' : (BuildContext context) => new MessagesPage(),
         '/search' : (BuildContext context) => new SearchPage(),
+        '/notifications' : (BuildContext context) => new NotificationsPage(),
+        '/questions' : (BuildContext context) => new QuestionsPage(),
         '/settings' : (BuildContext context) => new SettingsPage()
       },
     );
