@@ -22,6 +22,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.7"
+  bignum:
+    dependency: transitive
+    description:
+      name: bignum
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.7"
   boolean_selector:
     dependency: transitive
     description:
@@ -36,6 +43,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  cipher:
+    dependency: transitive
+    description:
+      name: cipher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.1"
   collection:
     dependency: transitive
     description:
@@ -92,6 +106,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.1+2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -214,6 +235,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1"
+  oauth:
+    dependency: transitive
+    description:
+      name: oauth
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.0"
   package_config:
     dependency: transitive
     description:
@@ -352,6 +380,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.37"
+  twitter:
+    dependency: "direct main"
+    description:
+      name: twitter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2"
   typed_data:
     dependency: transitive
     description:

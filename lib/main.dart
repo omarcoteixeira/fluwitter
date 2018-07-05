@@ -14,21 +14,10 @@ import 'package:fluwitter/pages/profile/profile_page.dart';
 import 'package:fluwitter/pages/questions/questions_page.dart';
 import 'package:fluwitter/pages/search/search_page.dart';
 import 'package:fluwitter/pages/settings/settings_page.dart';
+import 'package:fluwitter/providers/auth_provider.dart';
 
 void main() async {
-  final FirebaseApp app = await FirebaseApp.configure(
-    name: String.fromEnvironment("FIREBASE_APP_NAME"),
-    options: new FirebaseOptions(
-      apiKey: String.fromEnvironment("FIREBASE_OPTIONS_API_KEY"),
-      databaseURL: String.fromEnvironment("FIREBASE_OPTIONS_DATABASE_URL"),
-      projectID: String.fromEnvironment("FIREBASE_OPTIONS_PROJECT_ID"),
-      storageBucket: String.fromEnvironment("FIREBASE_OPTIONS_STORAGE_BUCKET"),
-      gcmSenderID: String.fromEnvironment("FIREBASE_OPTIONS_MESSAGE_ID"),
-      googleAppID: Platform.isIOS ? 
-        String.fromEnvironment("FIREBASE_OPTIONS_ANDROID_APP_ID") : 
-        String.fromEnvironment("FIREBASE_OPTIONS_IOS_APP_ID")
-    )
-  );
+  final FirebaseApp app = await AuthProvider.firebaseConfigure();
 
   Injector.configure(Flavor.PRODUCTION);
   runApp(new MyApp(app: app));

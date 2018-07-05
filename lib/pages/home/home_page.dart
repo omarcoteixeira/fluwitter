@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -29,11 +28,7 @@ class HomePageState extends LoadingBaseState<HomePage> {
     super.initState();
     this.view = new HomeView(context);
     this.presenter = new HomePresenter(view);
-
-    FirebaseAuth.instance.currentUser()
-      .then((FirebaseUser user) {
-        this.presenter.initView();
-      });
+    this.presenter.initView();
   }
 
   @override
