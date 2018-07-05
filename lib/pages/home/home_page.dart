@@ -25,11 +25,14 @@ class HomePageState extends LoadingBaseState<HomePage> {
   FirebaseDatabase database;
 
   @override
-  void initState() {
+  void initState() async{
     super.initState();
     this.view = new HomeView(context);
     this.presenter = new HomePresenter(view);
     this.presenter.initView();
+
+    FirebaseUser user = await FirebaseAuth.instance.currentUser();
+    print(user);
   }
 
   @override
@@ -67,9 +70,9 @@ class HomePageState extends LoadingBaseState<HomePage> {
         IconButton(
           icon: Icon(Icons.tune),
           onPressed: () {
-            FirebaseDatabase.instance.reference().once().then((DataSnapshot snapshot) {
-              print('Connected to the database and read ${snapshot.value}');
-            });
+            // FirebaseDatabase.instance.reference().once().then((DataSnapshot snapshot) {
+            //   print('Connected to the database and read ${snapshot.value}');
+            // });
           },
         ),
       ],

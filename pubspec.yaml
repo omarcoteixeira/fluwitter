@@ -7,6 +7,7 @@ dependencies:
   flutter_twitter_login: 1.1.0
   firebase_auth: 0.5.12
   firebase_database: 1.0.1
+  # twitter: 0.5.2
   # cloud_firestore: ^0.7.3
 
   # The following adds the Cupertino Icons font to your application.

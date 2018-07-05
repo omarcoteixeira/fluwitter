@@ -15,7 +15,7 @@ class HomePresenter extends HomePresenterContract {
 
   @override
   void load() {
-    // TODO: implement load
+    print('MALUQUETE DA IVETE');
   }
 
 }

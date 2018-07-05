@@ -17,14 +17,16 @@ import 'package:fluwitter/pages/settings/settings_page.dart';
 
 void main() async {
   final FirebaseApp app = await FirebaseApp.configure(
-    name: "Fluwitter",
+    name: String.fromEnvironment("FIREBASE_APP_NAME"),
     options: new FirebaseOptions(
-      apiKey: "IzaSyB18qZEY_NtLRaBkG7eoiRvw8c_IKBYGpw",
-      databaseURL: "https://fluwitter.firebaseio.com",
-      projectID: "fluwitter",
-      storageBucket: "fluwitter.appspot.com",
-      gcmSenderID: "783182018900",
-      googleAppID: Platform.isIOS ? "1:783182018900:ios:bfd922816707b01e" : "1:783182018900:android:bfd922816707b01e"
+      apiKey: String.fromEnvironment("FIREBASE_OPTIONS_API_KEY"),
+      databaseURL: String.fromEnvironment("FIREBASE_OPTIONS_DATABASE_URL"),
+      projectID: String.fromEnvironment("FIREBASE_OPTIONS_PROJECT_ID"),
+      storageBucket: String.fromEnvironment("FIREBASE_OPTIONS_STORAGE_BUCKET"),
+      gcmSenderID: String.fromEnvironment("FIREBASE_OPTIONS_MESSAGE_ID"),
+      googleAppID: Platform.isIOS ? 
+        String.fromEnvironment("FIREBASE_OPTIONS_ANDROID_APP_ID") : 
+        String.fromEnvironment("FIREBASE_OPTIONS_IOS_APP_ID")
     )
   );
 
