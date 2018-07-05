@@ -1,11 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 import 'package:fluwitter/pages/home/home_strings.dart' as Strings;
 import 'package:fluwitter/common/loading_state.dart';
 import 'package:fluwitter/pages/home/home_presenter.dart';
 import 'package:fluwitter/pages/home/home_view.dart';
-import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  final FirebaseApp app;
+
+  HomePage({this.app});
 
   @override
   State createState() => new HomePageState();
@@ -16,6 +22,7 @@ class HomePageState extends LoadingBaseState<HomePage> {
 
   HomeView view;
   HomePresenter presenter;
+  FirebaseDatabase database;
 
   @override
   void initState() {
@@ -60,7 +67,9 @@ class HomePageState extends LoadingBaseState<HomePage> {
         IconButton(
           icon: Icon(Icons.tune),
           onPressed: () {
-            print('Filter button');
+            FirebaseDatabase.instance.reference().once().then((DataSnapshot snapshot) {
+              print('Connected to the database and read ${snapshot.value}');
+            });
           },
         ),
       ],

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>783182018900-67o5fgj35qtt20u0cvte238orqa10oc4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.783182018900-67o5fgj35qtt20u0cvte238orqa10oc4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyVliejHGyo6OAKOxpTr0bzaq8kRmXWgQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>783182018900</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.omarcoteixeira.apps.fluwitter</string>
+	<key>PROJECT_ID</key>
+	<string>fluwitter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fluwitter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:783182018900:ios:bfd922816707b01e</string>
+	<key>DATABASE_URL</key>
+	<string>https://fluwitter.firebaseio.com</string>
+</dict>
+</plist>

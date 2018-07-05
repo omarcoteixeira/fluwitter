@@ -39,7 +39,7 @@ class LoginPageState extends LoadingBaseState<LoginPage> {
 
   @override
   bool isLoading() {
-    return false;
+    return this.view.isLoading;
   }
 
   @override

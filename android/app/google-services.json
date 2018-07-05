@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "783182018900",
+    "firebase_url": "https://fluwitter.firebaseio.com",
+    "project_id": "fluwitter",
+    "storage_bucket": "fluwitter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783182018900:android:bfd922816707b01e",
+        "android_client_info": {
+          "package_name": "br.com.omarcoteixeira.apps.fluwitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783182018900-ta2eaen6me6fcs9jf9osd9pppjbngc13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.omarcoteixeira.apps.fluwitter",
+            "certificate_hash": "96de104d12997d385771976242462f7590bfd50e"
+          }
+        },
+        {
+          "client_id": "783182018900-qah5t6c7ptrrag0co94ij936qq7c5e05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOZYyV_l6fZ4JlsEyuUYfCfJ7JUJ9mLqs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783182018900-qah5t6c7ptrrag0co94ij936qq7c5e05.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783182018900-67o5fgj35qtt20u0cvte238orqa10oc4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.omarcoteixeira.apps.fluwitter"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

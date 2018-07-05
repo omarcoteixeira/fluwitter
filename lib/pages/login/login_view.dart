@@ -1,3 +1,4 @@
+import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/login/login_presenter.dart';
 import 'package:fluwitter/pages/login/login_strings.dart' as Strings;
 import 'package:fluwitter/common/dialog_shower.dart' as DialogShower;
@@ -10,6 +11,7 @@ class LoginView extends LoginViewContract {
   final TextEditingController _emailController = new TextEditingController();
   final TextEditingController _passController = new TextEditingController();
 
+  bool isLoading = false;
   BuildContext context;
   LoginPresenterContract presenter;
   VoidCallback _onConfirmCallback;
@@ -144,6 +146,7 @@ class LoginView extends LoginViewContract {
   void onAuthenticationComplete() {
     print('Authenticated');
     Navigator.of(context).pop();
+    Navigator.of(context).pushNamed('/home');
   }
 
   TextEditingController get emailController => _emailController;
