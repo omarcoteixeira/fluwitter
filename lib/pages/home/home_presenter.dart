@@ -15,7 +15,6 @@ class HomePresenter extends HomePresenterContract {
 
   @override
   void load() {
-    print('MALUQUETE DA IVETE');
   }
 
 }

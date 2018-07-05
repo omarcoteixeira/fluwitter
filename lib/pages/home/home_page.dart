@@ -25,14 +25,15 @@ class HomePageState extends LoadingBaseState<HomePage> {
   FirebaseDatabase database;
 
   @override
-  void initState() async{
+  void initState() {
     super.initState();
     this.view = new HomeView(context);
     this.presenter = new HomePresenter(view);
-    this.presenter.initView();
 
-    FirebaseUser user = await FirebaseAuth.instance.currentUser();
-    print(user);
+    FirebaseAuth.instance.currentUser()
+      .then((FirebaseUser user) {
+        this.presenter.initView();
+      });
   }
 
   @override

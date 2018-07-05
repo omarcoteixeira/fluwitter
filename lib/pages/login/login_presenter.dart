@@ -85,8 +85,8 @@ class LoginPresenter extends LoginPresenterContract {
   Future twitterAuth() async{
     print('Twitter Login Listener');
     var twitterLogin = new TwitterLogin(
-      consumerKey: String.fromEnvironment("TWITTER_COMSUMER_KEY"),
-      consumerSecret: String.fromEnvironment("TWITTER_COMSUMER_SECRET"),
+      consumerKey: 'w6oqHyCQBjUXd2MAhQbqreGMQ',
+      consumerSecret: 'iKM2xMZr6fwZzOZgTb86pJoS7h5vrZBAwxRMCeWD0RnlGJATkl',
     );
 
     _twitterLoginResult = await twitterLogin.authorize();
