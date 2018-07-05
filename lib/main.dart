@@ -34,14 +34,13 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final FirebaseApp app;
-  
-  FirebaseDatabase database;
 
   MyApp({this.app});
 
   @override
   Widget build(BuildContext context) {
-    this.database = new FirebaseDatabase(app: this.app); // This part is necessary to start the application
+    // This part is necessary to start the application database
+    new FirebaseDatabase(app: this.app); 
     
     return new MaterialApp(
       title: 'Fluwitter',
