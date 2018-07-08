@@ -1,4 +1,4 @@
-package com.example.fluwitter;
+package br.com.omarcoteixeira.apps.fluwitter;
 
 import android.os.Bundle;
 
