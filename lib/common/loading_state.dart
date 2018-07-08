@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluwitter/strings.dart' as Strings;
 
-import 'package:fluwitter/pages/home/home_page.dart';
-import 'package:fluwitter/pages/search/search_page.dart';
-import 'package:fluwitter/pages/settings/settings_page.dart';
-import 'package:fluwitter/pages/notifications/notifications_page.dart';
-import 'package:fluwitter/pages/messages/messages_page.dart';
-import 'package:fluwitter/pages/profile/profile_page.dart';
-import 'package:fluwitter/pages/questions/questions_page.dart';
-
 abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
 
   @override
@@ -22,24 +14,20 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
   Widget content();
   AppBar appBar();
   FloatingActionButton floatingActionButton();
-
+  
+  String _currentRoute = 'home';
   String title();
 
   bool isLoading();
   bool isUserLogged();
 
   Drawer defaultDrawer(BuildContext context) {
-    String _route = 'home';
+    void _navigate(String route){
 
-    void _navigate(StatefulWidget widget, String route){
-      Navigator.pop(context);
-
-      setState(() => _route = route);
+      setState(() => this._currentRoute = route);
       
-      Navigator.push(
-        context,
-        new MaterialPageRoute(builder: (context) => widget)
-      );
+      Navigator.of(context).pop();
+      Navigator.of(context).pushNamed(route);
     }
 
     return new Drawer(
@@ -72,7 +60,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               title: const Text(Strings.menuHome),
               // selected: _route == 'home',
               onTap: () {
-              return _navigate(new HomePage(), 'home');
+              return _navigate('/home');
               },
             ),
             new ListTile(
@@ -81,7 +69,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               selected: false,
               // selected: _route == 'profile',
               onTap: () {
-                return _navigate(new ProfilePage(), 'profile');
+                return _navigate('/profile');
               },
             ),
             new ListTile(
@@ -89,7 +77,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               title: const Text(Strings.menuSearch),
               // selected: _route == 'search',
               onTap: () {
-              return _navigate(new SearchPage(), 'search');
+              return _navigate('/search');
               },
             ),
             new ListTile(
@@ -98,7 +86,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               selected: false,
               // selected: _route == 'notifications',
               onTap: () {
-                return _navigate(new NotificationsPage(), 'notifications');
+                return _navigate('/notifications');
               },
             ),
             new ListTile(
@@ -107,7 +95,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               selected: false,
               // selected: _route == 'messages',
               onTap: () {
-                return _navigate(new MessagesPage(), 'messages');
+                return _navigate('/messages');
               },
             ),
             new ListTile(
@@ -116,7 +104,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               selected: false,
               // selected: _route == 'settings',
               onTap: () {
-                return _navigate(new QuestionsPage(), 'questions');
+                return _navigate('/questions');
               },
             ),
             new Divider(),
@@ -125,7 +113,7 @@ abstract class LoadingBaseState<T extends StatefulWidget> extends State<T> {
               title: const Text(Strings.menuSettingsAndPrivacy),
               // selected: _route == 'settings',
               onTap: () {
-              return _navigate(new SettingsPage(), 'settings');
+              return _navigate('/settings');
               },
             ),
             new Divider(),

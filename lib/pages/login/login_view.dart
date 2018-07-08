@@ -1,4 +1,3 @@
-import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/login/login_presenter.dart';
 import 'package:fluwitter/pages/login/login_strings.dart' as Strings;
 import 'package:fluwitter/common/dialog_shower.dart' as DialogShower;

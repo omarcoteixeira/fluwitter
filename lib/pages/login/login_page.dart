@@ -60,11 +60,6 @@ class LoginPageState extends LoadingBaseState<LoginPage> {
   }
 
   @override
-  Drawer drawer() {
-    return null;
-  }
-
-  @override
   FloatingActionButton floatingActionButton() {
     return null;
   }

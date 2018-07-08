@@ -1,10 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:fluwitter/infrastructure/dependency_injection.dart';
-import 'package:fluwitter/infrastructure/flavor.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
+
+import 'package:fluwitter/infrastructure/dependency_injection.dart';
+import 'package:fluwitter/infrastructure/flavor.dart';
+import 'package:fluwitter/providers/auth_provider.dart';
 
 import 'package:fluwitter/pages/home/home_page.dart';
 import 'package:fluwitter/pages/login/login_page.dart';
@@ -14,7 +14,6 @@ import 'package:fluwitter/pages/profile/profile_page.dart';
 import 'package:fluwitter/pages/questions/questions_page.dart';
 import 'package:fluwitter/pages/search/search_page.dart';
 import 'package:fluwitter/pages/settings/settings_page.dart';
-import 'package:fluwitter/providers/auth_provider.dart';
 
 void main() async {
   final FirebaseApp app = await AuthProvider.firebaseConfigure();
