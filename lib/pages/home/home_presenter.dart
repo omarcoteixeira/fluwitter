@@ -18,7 +18,8 @@ class HomePresenter extends HomePresenterContract {
   void load() {
     FirebaseAuth.instance.currentUser()
       .then((FirebaseUser user) {
-        print(user.providerData.toList());
+        if (user != null)
+          print(user.providerData.toList());
       });
   }
 

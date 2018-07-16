@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -56,11 +57,7 @@ class HomePageState extends LoadingBaseState<HomePage> {
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.tune),
-          onPressed: () {
-            // FirebaseDatabase.instance.reference().once().then((DataSnapshot snapshot) {
-            //   print('Connected to the database and read ${snapshot.value}');
-            // });
-          },
+          onPressed: () {},
         ),
       ],
     );
