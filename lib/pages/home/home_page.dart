@@ -14,11 +14,9 @@ class HomePage extends StatefulWidget {
 
   @override
   State createState() => new HomePageState();
-
 }
 
 class HomePageState extends LoadingBaseState<HomePage> {
-
   HomeView view;
   HomePresenter presenter;
   FirebaseDatabase database;
@@ -33,14 +31,7 @@ class HomePageState extends LoadingBaseState<HomePage> {
 
   @override
   Widget content() {
-    return new Center(
-      child: new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          view.buildContent()
-        ],
-      ),
-    );
+    return view.buildContent();
   }
 
   @override
@@ -78,8 +69,6 @@ class HomePageState extends LoadingBaseState<HomePage> {
   @override
   FloatingActionButton floatingActionButton() {
     return new FloatingActionButton(
-      child: new Icon(Icons.add),
-      onPressed: (){}
-    );
+        child: new Icon(Icons.add), onPressed: () {});
   }
 }
